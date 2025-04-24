@@ -12,9 +12,15 @@ body{
   padding: 0;
   margin: 0;
   font-family: $font;
+  background-color: $green-200;
 
   // height: 100vh;
   // display: flex;
   // justify-content: center;
   // align-items: center;
+}
+
+main{
+  background-color: $white;
+  margin: auto 10px;
 }
