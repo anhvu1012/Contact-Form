@@ -12,15 +12,44 @@ body{
   padding: 0;
   margin: 0;
   font-family: $font;
+  color: $grey-900;
   background-color: $green-200;
 
-  // height: 100vh;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main{
   background-color: $white;
   margin: auto 10px;
+  padding: 20px;
+  border-radius: 15px;
+
+  h1{
+    margin-bottom: 30px;
+  }
+
+  form{
+    #name-container{
+      div{
+        &>*{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+h1, p{
+  margin: 0;
+}
+
+#modal-screen{
+  display: none;
+}
+
+.hidden{
+  display: none;
 }
