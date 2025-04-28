@@ -26,48 +26,61 @@
       <form id="contact-form">
         <div id="name-container">
           <div>
-            <label for="first-name"
+            <label class="label" for="first-name"
               >First Name <span class="required-highlight">*</span></label
             >
             <input
+              class="input"
               type="text"
               id="first-name"
               name="first-name"
               aria-invalid="true"
               aria-describedby="firstname-error"
+              autocomplete="name"
             />
-            <span id="firstname-error">This field is required</span>
+            <p class="error-message hidden" id="firstname-error">
+              This field is required
+            </p>
           </div>
           <div>
-            <label for="last-name"
+            <label class="label" for="last-name"
               >Last Name <span class="required-highlight">*</span></label
             >
             <input
+              class="input"
               type="text"
               id="last-name"
               name="last-name"
               aria-invalid="true"
               aria-describedby="lastname-error"
             />
-            <span id="lastname-error">This field is required</span>
+            <p class="error-message hidden" id="lastname-error">
+              This field is required
+            </p>
           </div>
         </div>
         <div>
-          <label for="email"
+          <label class="label" for="email"
             >Email Address <span class="required-highlight">*</span></label
           >
           <input
+            class="input"
             type="text"
             id="email"
             name="email"
             aria-invalid="true"
             aria-describedby="email-error"
+            autocomplete="email"
           />
-          <span id="email-error">Please enter a valid email address</span>
+          <p class="error-message hidden" id="email-error">
+            Please enter a valid email address
+          </p>
         </div>
         <div>
-          <p>Query Type <span class="required-highlight">*</span></p>
-          <div>
+          <p class="label">
+            Query Type <span class="required-highlight">*</span>
+          </p>
+          <div class="input radio">
             <input
               type="radio"
               id="general-enquiry"
@@ -78,7 +91,7 @@
             />
             <label for="general-enquiry">General Enquiry</label>
           </div>
-          <div>
+          <div class="input radio">
             <input
               type="radio"
               id="support-request"
@@ -89,38 +102,45 @@
             />
             <label for="support-request">Support Request</label>
           </div>
-          <span id="query-type-error">Please select a query type</span>
+          <p class="error-message hidden" id="query-type-error">
+            Please select a query type
+          </p>
         </div>
         <div>
-          <label for="message"
+          <label class="label" for="message"
             >Message <span class="required-highlight">*</span></label
           >
           <input
+            class="input"
             type="text"
             id="message"
             name="message"
             aria-invalid="true"
             aria-describedby="message-error"
           />
-          <span id="message-error">This field is required</span>
+          <p class="error-message hidden" id="message-error">
+            This field is required
+          </p>
         </div>
         <div>
-          <input
-            type="checkbox"
-            id="contact-consent"
-            name="contact-consent"
-            aria-invalid="true"
-            aria-describedby="consent-error"
-          />
-          <label for="contact-consent"
-            >I consent to being contacted by the team
-            <span class="required-highlight">*</span></label
-          >
-          <span id="consent-error"
-            >To submit this form, please consent to being contacted</span
-          >
+          <div>
+            <input
+              type="checkbox"
+              id="contact-consent"
+              name="contact-consent"
+              aria-invalid="true"
+              aria-describedby="consent-error"
+            />
+            <label for="contact-consent"
+              >I consent to being contacted by the team
+              <span class="required-highlight">*</span></label
+            >
+          </div>
+          <p class="error-message hidden" id="consent-error">
+            To submit this form, please consent to being contacted
+          </p>
         </div>
-        <input type="submit" value="Submit" />
+        <input id="submit-btn" type="submit" value="Submit" />
       </form>
     </main>
 

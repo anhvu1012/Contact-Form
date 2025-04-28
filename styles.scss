@@ -8,6 +8,28 @@ $white: hsl(0, 0%, 100%);
 $grey-500: hsl(186, 15%, 59%);
 $grey-900: hsl(187, 24%, 22%);
 
+@mixin label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+@mixin border-style{
+  border: 1px solid $grey-900;
+  border-radius: 7px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@mixin row-gap-layout{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 body{
   padding: 0;
   margin: 0;
@@ -21,35 +43,97 @@ body{
   align-items: center;
 }
 
+h1, p{
+  margin: 0;
+}
+
 main{
   background-color: $white;
-  margin: auto 10px;
-  padding: 20px;
+  margin: auto 15px;
+  padding: 25px;
   border-radius: 15px;
 
   h1{
+    font-size: 1.9em;
     margin-bottom: 30px;
   }
 
   form{
-    #name-container{
+    &>div{
+      margin-bottom: 30px;
+    }
+
+    &>div:last-of-type{
       div{
-        &>*{
-          display: block;
+        @include row-gap-layout;
+        margin-bottom: 10px;
+
+        #contact-consent{
+          width: 20px;
+          height: 20px;
+          border-radius: 1px !important; 
         }
       }
+    }
+
+    #name-container{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #message{
+      height: 220px;
+    }
+
+    .label{
+      @include label;
+    }
+
+    .input{
+      @include border-style;
+
+      input[type="radio"]{
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    .radio{
+      @include row-gap-layout;
+
+      label{
+        font-size: 18px;
+      }
+    }
+
+    .required-highlight{
+      color: $green-600;
+    }
+
+    .error-message{
+      color: $red;
+    }
+
+    input[type="submit"]{
+      width: 100%;
+      background-color: $green-600;
+      color: $white;
+      border: none;
+      border-radius: 8px;
+      padding: 17px;
+      font-family: $font;
+      font-weight: 400;
+      font-size: 16px;
     }
   }
 }
 
-h1, p{
-  margin: 0;
+.hidden{
+  display: none;
 }
 
 #modal-screen{
   display: none;
 }
 
-.hidden{
-  display: none;
-}
