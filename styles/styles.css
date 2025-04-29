@@ -57,6 +57,7 @@ main form #query-types-container {
 }
 main form #message {
   height: 220px;
+  resize: none;
 }
 main form .label {
   display: block;
