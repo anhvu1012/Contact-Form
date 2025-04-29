@@ -11,7 +11,7 @@ main h1 {
   margin-bottom: 30px;
 }
 main form > div {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 main form > div:last-of-type div {
   display: flex;
@@ -76,7 +76,6 @@ main form .required-highlight {
 }
 main form .error-message {
   color: hsl(0, 66%, 54%);
-  margin-bottom: 20px;
 }
 main form input[type=submit] {
   width: 100%;
