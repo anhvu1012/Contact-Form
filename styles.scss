@@ -30,6 +30,11 @@ $grey-900: hsl(187, 24%, 22%);
   gap: 15px;
 }
 
+@mixin column-flex-div{
+  display: flex;
+  flex-direction: column;
+}
+
 body{
   padding: 0;
   margin: 0;
@@ -48,6 +53,7 @@ h1, p{
 }
 
 main{
+  @include column-flex-div;
   background-color: $white;
   margin: auto 15px;
   padding: 25px;
@@ -60,12 +66,13 @@ main{
 
   form{
     &>div{
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
     &>div:last-of-type{
       div{
         @include row-gap-layout;
+        margin-top: 20px;
         margin-bottom: 10px;
 
         #contact-consent{
@@ -76,10 +83,17 @@ main{
       }
     }
 
-    #name-container{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    #name-container {
+      @include column-flex-div;
+      row-gap: 20px;
+      div{
+        @include column-flex-div;
+        width: 100%;
+      }
+    }
+
+    #query-types-container{
+      @include column-flex-div;
     }
 
     #message{
@@ -96,11 +110,13 @@ main{
       input[type="radio"]{
         width: 17px;
         height: 17px;
+        margin: 0;	
       }
     }
 
     .radio{
       @include row-gap-layout;
+      margin-top: 10px;
 
       label{
         font-size: 18px;
@@ -113,6 +129,7 @@ main{
 
     .error-message{
       color: $red;
+      margin-bottom: 20px;
     }
 
     input[type="submit"]{
@@ -125,6 +142,7 @@ main{
       font-family: $font;
       font-weight: 400;
       font-size: 16px;
+      margin-top: 20px;
     }
   }
 }
@@ -137,3 +155,20 @@ main{
   display: none;
 }
 
+@media screen and (min-width: 900px) {
+  main{
+    width: 650px;
+    padding: 35px;
+
+    form{
+      #name-container, #query-types-container{
+        flex-direction: row;
+        column-gap: 20px;
+      }
+
+      #message{
+        height: 120px;
+      }
+    }
+  }
+}

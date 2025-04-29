@@ -80,27 +80,29 @@
           <p class="label">
             Query Type <span class="required-highlight">*</span>
           </p>
-          <div class="input radio">
-            <input
-              type="radio"
-              id="general-enquiry"
-              name="query-type"
-              value="general-enquiry"
-              aria-invalid="true"
-              aria-describedby="query-type-error"
-            />
-            <label for="general-enquiry">General Enquiry</label>
-          </div>
-          <div class="input radio">
-            <input
-              type="radio"
-              id="support-request"
-              name="query-type"
-              value="support-request"
-              aria-invalid="true"
-              aria-describedby="query-type-error"
-            />
-            <label for="support-request">Support Request</label>
+          <div id="query-types-container">
+            <div class="input radio">
+              <input
+                type="radio"
+                id="general-enquiry"
+                name="query-type"
+                value="general-enquiry"
+                aria-invalid="true"
+                aria-describedby="query-type-error"
+              />
+              <label for="general-enquiry">General Enquiry</label>
+            </div>
+            <div class="input radio">
+              <input
+                type="radio"
+                id="support-request"
+                name="query-type"
+                value="support-request"
+                aria-invalid="true"
+                aria-describedby="query-type-error"
+              />
+              <label for="support-request">Support Request</label>
+            </div>
           </div>
           <p class="error-message hidden" id="query-type-error">
             Please select a query type
@@ -110,14 +112,14 @@
           <label class="label" for="message"
             >Message <span class="required-highlight">*</span></label
           >
-          <input
+          <textarea
             class="input"
             type="text"
             id="message"
             name="message"
             aria-invalid="true"
             aria-describedby="message-error"
-          />
+          ></textarea>
           <p class="error-message hidden" id="message-error">
             This field is required
           </p>
@@ -154,5 +156,6 @@
       </header>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
