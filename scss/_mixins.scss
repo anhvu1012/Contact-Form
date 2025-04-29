@@ -1,0 +1,28 @@
+@import './variables';
+
+@mixin label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+@mixin border-style{
+  border: 1px solid $grey-900;
+  border-radius: 7px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@mixin row-gap-layout{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@mixin column-flex-div{
+  display: flex;
+  flex-direction: column;
+}

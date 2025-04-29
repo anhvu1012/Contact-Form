@@ -1,56 +1,5 @@
-$font: 'Karla', sans-serif;
-
-$green-200: hsl(148, 38%, 91%);
-$green-600: hsl(169, 82%, 27%);
-$red: hsl(0, 66%, 54%);
-
-$white: hsl(0, 0%, 100%);
-$grey-500: hsl(186, 15%, 59%);
-$grey-900: hsl(187, 24%, 22%);
-
-@mixin label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-@mixin border-style{
-  border: 1px solid $grey-900;
-  border-radius: 7px;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@mixin row-gap-layout{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-@mixin column-flex-div{
-  display: flex;
-  flex-direction: column;
-}
-
-body{
-  padding: 0;
-  margin: 0;
-  font-family: $font;
-  color: $grey-900;
-  background-color: $green-200;
-
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1, p{
-  margin: 0;
-}
+@import './mixins';
+@import './variables';
 
 main{
   @include column-flex-div;
@@ -144,32 +93,6 @@ main{
       font-weight: 400;
       font-size: 16px;
       margin-top: 20px;
-    }
-  }
-}
-
-.hidden{
-  display: none;
-}
-
-#modal-screen{
-  display: none;
-}
-
-@media screen and (min-width: 900px) {
-  main{
-    width: 650px;
-    padding: 35px;
-
-    form{
-      #name-container, #query-types-container{
-        flex-direction: row;
-        column-gap: 20px;
-      }
-
-      #message{
-        height: 120px;
-      }
     }
   }
 }
