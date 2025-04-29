@@ -1,8 +1,7 @@
 @import './variables';
 @import './mixins';
 @import './main-container';
-
-
+@import './modal-screen';
 
 body{
   padding: 0;
@@ -22,10 +21,6 @@ h1, p{
 }
 
 .hidden{
-  display: none;
-}
-
-#modal-screen{
   display: none;
 }
 

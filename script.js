@@ -41,17 +41,30 @@ const emailRegex = /^\S+@\S+\.\S+$/;
 
 const form = document.getElementById('contact-form');
 
+const successScreen = document.getElementById('modal-screen');
+
 const areAllInputsValid = (dataArray) => {
   return dataArray.every(input => input.isValid);
 };
 
 const displayErrorState = (input) => {
-  console.log(input);
+  const inputField = document.getElementById(`${input.name}`);
+
+  const errorMessage = document.getElementById(`${input.name}-error`);
+
+  // console.log(errorMessage);
+
+  if (input.type === 'text' || input.type === 'textarea'){
+     inputField.style.borderColor = 'red';
+  }
+
+  errorMessage.classList.remove('hidden');
 };
 
 const validateData = () => {
   if (areAllInputsValid(data)) {
-    console.log('Success');
+    // successScreen.style.display = 'block';
+    console.log('success');
   } 
   else{
     const inValidInputs = data.filter((input) => input.isValid === false);

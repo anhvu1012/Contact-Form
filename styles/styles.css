@@ -11,7 +11,7 @@ main h1 {
   margin-bottom: 30px;
 }
 main form > div {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 main form > div:last-of-type div {
   display: flex;
@@ -90,6 +90,34 @@ main form input[type=submit] {
   margin-top: 20px;
 }
 
+#modal-screen {
+  display: none;
+  position: absolute;
+  top: 20px;
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 30px 25px;
+}
+#modal-screen header {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#modal-screen header img {
+  width: 25px;
+  height: 25px;
+}
+#modal-screen header h1 {
+  font-size: 21px;
+}
+#modal-screen p {
+  font-weight: 200;
+  font-size: 18px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -107,10 +135,6 @@ h1, p {
 }
 
 .hidden {
-  display: none;
-}
-
-#modal-screen {
   display: none;
 }
 
