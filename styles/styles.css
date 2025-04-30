@@ -112,7 +112,7 @@ main form input[type=submit] {
   width: 25px;
   height: 25px;
 }
-#modal-screen header h1 {
+#modal-screen header h2 {
   font-size: 21px;
 }
 #modal-screen p {
