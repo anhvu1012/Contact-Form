@@ -63,14 +63,44 @@ const displayErrorState = (input) => {
 
 const validateData = () => {
   if (areAllInputsValid(data)) {
-    // successScreen.style.display = 'block';
+    successScreen.style.display = 'block';
     console.log('success');
+    clearInputs(data);
   } 
   else{
     const inValidInputs = data.filter((input) => input.isValid === false);
 
     inValidInputs.forEach(errorInput => displayErrorState(errorInput));
   }
+};
+
+const clearInputs = (dataArray) => {
+  const errorMessages = Array.from(document.querySelectorAll('.error-message'));
+  errorMessages.forEach((message) => {
+    message.classList.add('hidden');
+  });
+
+  dataArray.forEach((input) => {
+    const inputField = input.type === 'radio' ? document.getElementById(`${input.value}`) : document.getElementById(`${input.name}`);
+
+    inputField.style.borderColor = '';
+    
+    const originalBorderColor = getComputedStyle(inputField).borderColor;
+
+    switch (input.type) {
+      case 'text':
+      case 'textarea':
+        inputField.value = '';
+        
+        inputField.style.borderColor = `${originalBorderColor}`;
+        break;
+      case 'checkbox':
+        inputField.checked = false;
+        break;
+      case 'radio':
+        inputField.checked = false;
+    }
+  });
 };
 
 form.addEventListener('submit', (event) => {
