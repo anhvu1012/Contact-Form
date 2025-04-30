@@ -84,7 +84,7 @@ const clearInputs = (dataArray) => {
     const inputField = input.type === 'radio' ? document.getElementById(`${input.value}`) : document.getElementById(`${input.name}`);
 
     inputField.style.borderColor = '';
-    
+
     const originalBorderColor = getComputedStyle(inputField).borderColor;
 
     switch (input.type) {
@@ -136,6 +136,6 @@ form.addEventListener('submit', (event) => {
     }
   });
 
-  console.log(data);
+  // console.log(data);
   validateData();
 });
