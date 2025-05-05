@@ -20,10 +20,14 @@ main form > div:last-of-type div {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+main form > div:last-of-type div label {
+  cursor: pointer;
+}
 main form > div:last-of-type div #contact-consent {
   width: 20px;
   height: 20px;
   border-radius: 1px !important;
+  accent-color: hsl(169, 82%, 27%);
 }
 main form #name-container {
   display: flex;
@@ -52,25 +56,32 @@ main form .input {
   border: 1px solid hsl(187, 24%, 22%);
   border-radius: 7px;
   padding: 15px 20px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 16px;
   width: 100%;
   box-sizing: border-box;
   font-family: "Karla", sans-serif;
+  cursor: pointer;
 }
-main form .input input[type=radio] {
-  width: 17px;
-  height: 17px;
-  margin: 0;
+main form .input:hover {
+  border-color: hsl(169, 82%, 27%);
 }
 main form .radio {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-top: 10px;
+  cursor: pointer;
+}
+main form .radio input[type=radio] {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: hsl(169, 82%, 27%);
 }
 main form .radio label {
   font-size: 18px;
+  cursor: pointer;
 }
 main form .required-highlight {
   color: hsl(169, 82%, 27%);
@@ -90,6 +101,9 @@ main form input[type=submit] {
   font-size: 16px;
   margin-top: 20px;
   cursor: pointer;
+}
+main form input[type=submit]:hover {
+  background-color: hsl(169, 82%, 15%);
 }
 
 #modal-screen {

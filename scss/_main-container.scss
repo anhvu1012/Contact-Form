@@ -24,10 +24,15 @@ main{
         margin-top: 20px;
         margin-bottom: 10px;
 
+        label{
+          cursor: pointer;
+        }
+
         #contact-consent{
           width: 20px;
           height: 20px;
           border-radius: 1px !important; 
+          accent-color: $green-600;
         }
       }
     }
@@ -57,20 +62,28 @@ main{
     .input{
       @include border-style;
       font-family: $font;
+      cursor: pointer;
 
-      input[type="radio"]{
-        width: 17px;
-        height: 17px;
-        margin: 0;	
+      &:hover{
+        border-color: $green-600;
       }
     }
 
     .radio{
       @include row-gap-layout;
       margin-top: 10px;
+      cursor: pointer;
+
+      input[type="radio"]{
+        width: 17px;
+        height: 17px;
+        margin: 0;
+        accent-color: $green-600;
+      }
 
       label{
         font-size: 18px;
+        cursor: pointer;
       }
     }
 
@@ -94,6 +107,10 @@ main{
       font-size: 16px;
       margin-top: 20px;
       cursor: pointer;
+
+      &:hover{
+        background-color: hsl(169, 82%, 15%);
+      }
     }
   }
 }
